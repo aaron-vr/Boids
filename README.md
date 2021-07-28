@@ -6,7 +6,9 @@ Boids, as described by their creator, Craig Reynolds, represent bird-oid (or bir
 
 This small programme I wrote using SFML and C++ simulates the movement of boids in two dimensions and abides by the three rules put forth by Reynolds in his 1987 paper titled [Flocks, herds and schools: A distributed behavioral model](https://dl.acm.org/doi/10.1145/37401.37406).
 
+
 The rule are as follows: 
+
 
 1. Separation 
 
