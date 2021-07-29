@@ -25,7 +25,8 @@ I've allowed the boids to wrap around the screen this time, as the *alignment *b
 
 The flock seems to behave the same way as it did in the previous stage, but there's a small caveat; those few initial boids that are spawned with a velocity vector close to the inverse of the flock's velocity won't actually gradually align with the rest as this rule only takes positions into account, rather than directions. Therefore the *dissident* boids will likely fly against the tide in perpetuity, unless they come across a small flock with very high cohesion in which case they'll likely join them - I believe this happens once or twice in the gif above.
 
-4. All the rules added together - I've also included a tiny central pulling force to keep the flock near the centre of the screen.
+## The final result
+I've added the three rules together and also included a tiny central pulling force to keep the flock near the centre of the screen.
 
 ![](gifs/final.gif)
 
