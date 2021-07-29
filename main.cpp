@@ -7,7 +7,7 @@
 int main () {
 
   //initialize game session
-  Game<Circle> game(5, 100, sf::Color::Black, true);
+  Game<Circle> game(5, 100, sf::Color::Green, true);
 
   //game loop facillitating double buffering
   while (game.running())

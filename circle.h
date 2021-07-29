@@ -12,14 +12,14 @@ class Circle {
 
 private:
 
-  static constexpr unsigned int max_velocity = 400;
-  static constexpr unsigned int min_velocity = 100;
-  static constexpr float step = 0.05f;
+  static constexpr unsigned int max_velocity = 80;
+  static constexpr unsigned int min_velocity = 20;
+  static constexpr float step = 0.2f;
   //static constexpr unsigned int fov_spread = 315;
   static constexpr float drag = 0.998f;
 
   unsigned int radius = 5;
-  unsigned int fov_length = 15*radius;
+  unsigned int fov_length = 10*radius;
 
   sf::Color fill_color;
   sf::Vector2f velocity;
@@ -125,6 +125,10 @@ public:
   void setVelocity(const sf::Vector2f& vec) {
     this->velocity = vec;
   }
+  void setFillColor(const sf::Color color) {
+    this->body.setFillColor(color);
+  }
+
 
 //moves the boid along its velocity vector but multiplied by the STEP member variable in order to make movement seem more natural
   void fly() {

@@ -36,6 +36,7 @@ public:
       //call the init method for each boid
       values[i].boidInit(size, sf::Color(*rgb_arr, *(rgb_arr+1), *(rgb_arr+2), (uint8_t)255), window->getSize().x, window->getSize().y);
     }
+    this->values[0].setFillColor(sf::Color::Red);
 
   }
 
@@ -61,10 +62,10 @@ public:
 
 
       for (size_type j{0}; j < this->sz; j++) {
-        avg_velocity+=values[j].getVelocity();
 
         if (j != i && values[i].distBetween(values[j])) {
 
+          avg_velocity+=values[j].getVelocity();
           centre_of_mass += values[j].getPosition();
 
           x_res+=values[i].getPosition().x-values[j].getPosition().x;
@@ -81,14 +82,14 @@ public:
 
       values[i].setVelocity(sf::Vector2f(
         x_res
-        +(centre_of_mass.x-values[i].getVelocity().x)/100
-        +(avg_velocity.x-values[i].getVelocity().x)/40
-        +(950-values[i].getPosition().x)/200
+        +(centre_of_mass.x-values[i].getVelocity().x)/50
+        +(avg_velocity.x-values[i].getVelocity().x)/20
+        +(950-values[i].getPosition().x)/400
         ,
         y_res
-        +(centre_of_mass.y-values[i].getVelocity().y)/100
-        +(avg_velocity.y-values[i].getVelocity().y)/40
-        +(500-values[i].getPosition().y)/200
+        +(centre_of_mass.y-values[i].getVelocity().y)/50
+        +(avg_velocity.y-values[i].getVelocity().y)/20
+        +(500-values[i].getPosition().y)/400
       ));
 
       values[i].wrap(window->getSize().x, window->getSize().y);
