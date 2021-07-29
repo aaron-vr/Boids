@@ -34,3 +34,5 @@ The flock seems to behave the same way as it did in the previous stage, but ther
 The boids now show clear flocking and steering behaviour that emerge from these three simple rules. By slighly modifying the parameters and the relative intensity of each rule, one can produce a variety of deviations to the expected flocking behaviour such as the one below:
 
 ![](gifs/variation.gif)
+
+If you want to read more about Craig Reynolds's work here are the [slides](2016_UCSC_Steering_Behaviors.pdf) to his most recent lecture on steering behaviours from 2016.
